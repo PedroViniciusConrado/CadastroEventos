@@ -1,0 +1,92 @@
+Cadastro de Eventos de Desenvolvimento
+
+Critérios:
+- cadastrar evento;
+- só permitir cadastro para datas futuras;
+- só permitir cadastro por maiores de 17 anos;
+- só permitir cadastro de participantes até o centésimo;
+- permitir consulta aos eventos, listando participantes e palestrantes por evento.
+
+Criar um fluxograma
+
+Pseudocódigo		
+	
+1. algoritmo "CadastroEventosDesenvolvimento"
+2. var
+3. dataatual, datadoevento, horario, palestrante, titulo, resposta: caractere
+4. idade, numeroparticipantes: número
+5. participantes: vetor
+6. escrever ("Quer consultar algum evento?")
+7. ler (resposta)
+8. se resposta = "sim"
+9. escrever ("Consultar por data?")
+10. ler (resposta)
+11. se resposta = "sim"
+12. escrever ("Informe data:")
+13. ler (datadoevento)
+14. //procedimento para buscar no banco por data e os dados do evento
+15. escrever ("Data do evento: ",datadoevento)
+16. escrever ("Horário do evento: ",horario)
+17. escrever ("Título do evento: ",tiulo)
+18. escrever ("Palestrante do evento: ",palestrante)
+19. escrever ("Participantes do evento: ",participantes)
+20. senão se resposta = "não"
+21. escrever ("Consultar por palestrante?")
+22. ler (resposta)
+23. se resposta = "sim"
+24. escrever ("Informe o palestrante:")
+25. ler (palestrante)
+26. //procedimento para buscar no banco por palestrante
+27. escrever ("Data do evento: ",datadoevento)
+28. escrever ("Horário do evento: ",horario)
+29. escrever ("Título do evento: ",tiulo)
+30. escrever ("Palestrante do evento: ",palestrante)
+31. escrever ("Participantes do evento: ",participantes)
+32. senão se resposta = "não"
+33. escrever ("Consultar por participante?")
+34. ler (resposta)
+35. se resposta = "sim"
+36. escrever ("Informe o participante:")
+37. ler (participante)
+38. //procedimento para buscar no banco por participante
+39. escrever ("Data do evento: ",datadoevento)
+40. escrever ("Horário do evento: ",horario)
+41. escrever ("Título do evento: ",tiulo)
+42. escrever ("Palestrante do evento: ",palestrante)
+43. escrever ("Participantes do evento: ",participantes)
+44. senão se resposta = "não"
+45. escrever ("Quer cadastrar evento?")
+46. ler (resposta)
+47. se resposta = "sim"
+48. escrever ("Informe sua idade:")
+49. ler (idade)
+50. se idade < 18
+51. escrever ("Evento só pode ser cadastrado por pessoas com 18 anos ou mais!")
+52. senão
+53. escrever ("Informe data do evento:")
+54. ler (datadoevento)
+55. se datadoevento <= dataatual
+56. escrever ("Somente eventos futuros podem ser cadastrados!")
+57. senão
+58. escrever ("Informe o número de participantes:")
+59. ler (numeroparticipantes)
+60. se numeroparticipantes > 100
+61. escrever ("Só são permitidos eventos com até 100 participantes")
+62. senão
+63. escrever ("Informe o horário do evento: ")
+64. ler (horario)
+65. escrever ("Informe palestrante:")
+66. ler (palestrante)
+67. escrever ("Informe o título do evento: ")
+68. ler (titulo)
+69. escrever ("Informe os participantes do evento: ")
+70. ler (participantes)
+71. //procedimento para gravar no banco o evento
+72. escrever ("Data do evento: ",datadoevento)
+73. escrever ("Horário do evento: ",horario)
+74. escrever ("Título do evento: ",tiulo)
+75. escrever ("Palestrante do evento: ",palestrante)
+76. escrever ("Participantes do evento: ",participantes)
+
+
+Para permitir entrada usando prompt-sync pelo node, entrar pelo emulador Git Bash na pasta do projeto com o comando "npm i prompt-sync". Deixar rodar até o final da instalação.
